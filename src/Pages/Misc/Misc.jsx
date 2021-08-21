@@ -1,7 +1,7 @@
 import React from 'react'
 import { Layout } from '../../Layout/Layout'
 
-export const About = () => {
+export const Misc = () => {
     return (
         <Layout>
             <div style={{
@@ -10,7 +10,7 @@ export const About = () => {
                 alignItems: 'center',
                 height: '90vh'
             }}>
-                <h1>About</h1>
+                <h1>Misc</h1>
             </div>
         </Layout>
     );

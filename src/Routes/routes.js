@@ -1,20 +1,44 @@
-import { Home } from "../Pages/Home/Home";
-import { About } from "../Pages/About/About";
-import { Home as HomeIcon, People } from "@material-ui/icons";
+import { General } from "../Pages/General/General";
+import { Misc } from "../Pages/Misc/Misc";
+import { Education } from "../Pages/Education/Education";
+import { Experience } from "../Pages/Experience/Experience";
+import { License } from "../Pages/License/License";
+import { Person, School, Work, MoreHoriz, Assignment } from "@material-ui/icons";
 
 export const mainRoutes = [
     {
-        label: "Home",
+        label: "General",
         path: "/",
         exact: true,
-        icon: HomeIcon,
-        component: Home,
+        icon: Person,
+        component: General,
     },
     {
-        label: "About Me",
-        path: "/about",
+        label: "Education",
+        path: "/edu",
         exact: true,
-        icon: People,
-        component: About
+        icon: School,
+        component: Education
+    },
+    {
+        label: "License",
+        path: "/license",
+        exact: true,
+        icon: Assignment,
+        component: License
+    },
+    {
+        label: "Experience",
+        path: "/exp",
+        exact: true,
+        icon: Work,
+        component: Experience
+    },
+    {
+        label: "Miscellaneous",
+        path: "/misc",
+        exact: true,
+        icon: MoreHoriz,
+        component: Misc
     }
 ]

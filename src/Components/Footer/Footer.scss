@@ -4,7 +4,12 @@ footer {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    padding: 24px 0;
-    background-color: #628395;
+    padding-top: 24px;
+    background-color: rgba(98, 131, 149, 0.6);
     color: white;
+}
+
+.credit {
+    height: 3vw;
+    background-color: rgba(43, 68, 82, 0.3);
 }

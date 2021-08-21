@@ -28,7 +28,7 @@ export const Navbar = () => {
         setDrawer(true);
     }
     return (
-            <AppBar color="transparent" elevation={0} className={classes.root}>
+            <AppBar color="transparent" className={classes.root}>
                 <Toolbar className={classes.menuButton}>
                     <Hidden xsDown>
                         <Grid container justify="center" spacing={5}>

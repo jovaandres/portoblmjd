@@ -1,0 +1,37 @@
+.underline {
+    height: 0.25rem;
+    width: 100%;
+    background-color: cadetblue;
+    margin-bottom: 12px;
+}
+
+.container-1 {
+    margin: 1rem 2rem;
+    max-width: 20vw;
+    h1 {
+        margin: 4px 0;
+    }
+
+    p {
+        text-align: justify;
+        font-size: medium;
+        b {
+            font-size: x-large;
+        }
+    }
+}
+
+.container-2 {   
+    margin: 1rem 2rem;
+    overflow: hidden;
+    padding: 0.5rem 0.5rem;
+    background: rgb(70,142,180);
+    background: linear-gradient(129deg, rgba(70,142,180,1) 0%, rgba(105,181,210,1) 46%, rgba(0,154,190,1) 100%);
+    border-radius: 50%;
+    img {
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        z-index: 5;
+    }
+}
