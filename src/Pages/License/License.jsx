@@ -10,7 +10,7 @@ export const License = () => {
                 alignItems: 'center',
                 height: '90vh'
             }}>
-                <h1>General</h1>
+                <h1>License</h1>
             </div>
         </Layout>
     );

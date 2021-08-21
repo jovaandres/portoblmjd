@@ -10,7 +10,8 @@ export const General = () => {
                 display: 'flex',
                 justifyContent: 'space-evenly',
                 alignItems: 'center',
-                height: '90vh'
+                margin: '8rem 0 0 0',
+                height: '80vh'
             }}>
                 <div className="container-1">
                     <h1>Hello, there!</h1>
