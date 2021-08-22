@@ -12,5 +12,10 @@ html, body, .root {
 }
 
 body {
-    background: url("../Images/background.jpg");
+    position: relative;
+    background: url("../Images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }

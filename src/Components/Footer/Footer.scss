@@ -1,15 +1,19 @@
 footer {
     width: 100%;
     display: flex;
-    justify-content: center;
     text-align: center;
     flex-direction: column;
-    padding-top: 24px;
-    background-color: rgba(98, 131, 149, 0.6);
-    color: white;
+    padding-top: 20px;
+    border-top: 2px solid #f37dd0;
+    background-color: rgba(246, 198, 234, 0.5);
+    color: #FF449F;
 
     .credit {
         height: auto;
-        background-color: rgba(43, 68, 82, 0.3);
+        background-color: rgba(255, 68, 159, 0.8);
+
+        p {
+            color: wheat;
+        }
     }
 }

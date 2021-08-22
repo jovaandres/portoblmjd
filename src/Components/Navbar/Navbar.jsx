@@ -10,7 +10,7 @@ import "./Navbar.scss";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        backdropFilter: 'blur(15px)'
+        backdropFilter: 'blur(12px)',
     },
     menuButton: {
         alignSelf: 'center'
@@ -19,8 +19,14 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     paper: {
-        background: "rgba(203, 203, 188, 0.9)"
-      }
+        background: "rgba(240, 143, 192, 0.9)",
+    },
+    text: {
+        color: "white",
+    },
+    icon: {
+        color: "white",
+    }
 }));
 
 export const Navbar = () => {
@@ -52,13 +58,13 @@ export const Navbar = () => {
                         Menu
                     </Button>
                     <Drawer anchor="top" open={drawer} onClose={closeDrawer} classes={{ paper: classes.paper }}>
-                {mainRoutes.map((d) => (
-                    <ListItem button component={NavLink} to={d.path} key={d.path}>
-                        <ListItemIcon>{<d.icon />}</ListItemIcon>
-                        <ListItemText>{d.label}</ListItemText>
-                    </ListItem>
-                ))}
-            </Drawer>
+                        {mainRoutes.map((d) => (
+                            <ListItem button component={NavLink} to={d.path} key={d.path}>
+                                <ListItemIcon className={classes.icon}>{<d.icon />}</ListItemIcon>
+                                <ListItemText classes={{ primary: classes.text }}>{d.label}</ListItemText>
+                            </ListItem>
+                        ))}
+                    </Drawer>
                 </Hidden>
             </Toolbar>
         </AppBar>

@@ -7,21 +7,21 @@ export const Footer = () => {
     return (
         <footer>
             <div>
-                Reach Me
+                follow me
             </div>
             <div>
                 <IconButton href="https://www.instagram.com/jov.andrs/" target="_blank" rel="noreferer">
-                    <i class="fab fa-instagram"></i>
+                    <i style={{ color: '#f16d' }} class="fab fa-instagram"></i>
                 </IconButton>
                 <IconButton href="https://www.linkedin.com/in/jova-andres-riski-b0b232200/" target="_blank" rel="noreferer">
-                    <i class="fab fa-linkedin"></i>
+                    <i style={{ color: '#1a9ddb' }} class="fab fa-linkedin"></i>
                 </IconButton>
                 <IconButton href="https://open.spotify.com/user/389di68eunjgi5z3q680y7y87" target="_blank" rel="noreferer">
-                    <i class="fab fa-spotify"></i>
+                    <i style={{ color: '#17e660' }} class="fab fa-spotify"></i>
                 </IconButton>
             </div>
             <div className="credit">
-                <p>&copy; 2021 by Jova Andreas</p>
+                <p>&copy; 2021 by jova andreas</p>
             </div>
         </footer>
     )

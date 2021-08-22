@@ -5,33 +5,86 @@
     margin-bottom: 12px;
 }
 
-.container-1 {
-    margin: 1rem 2rem;
-    max-width: 20vw;
-    h1 {
-        margin: 4px 0;
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 4rem 0 0 0;
+    min-height: 80vh;
+
+    .flip-box {
+        margin: 1rem 2rem;
+        max-width: 24vw;
+        perspective: 1000px;
+
+        .flip-box-inner {
+            display: grid;
+            place-items: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            width: 100%;
+            height: 100%;
+            grid-template-areas: "inner-div";
+
+            .container-1, .container-1-back {
+                grid-area: inner-div;
+                backface-visibility: hidden;
+              }
+              
+            .container-1-back {
+                transform: rotateY(180deg);
+              }
+
+            .container-1, .container-1-back {
+                h1 {
+                    margin: 4px 0;
+                }
+            
+                p {
+                    text-align: justify;
+                    font-size: 18px;
+                    line-height: 1.4;
+                    b {
+                        font-size: x-large;
+                    }
+                }
+            }
+        }
     }
 
-    p {
-        text-align: justify;
-        font-size: medium;
-        b {
-            font-size: x-large;
+    .flip-box:hover .flip-box-inner {
+        transform: rotateY(180deg);
+      }
+    
+    .container-2 {   
+        overflow: hidden;
+        margin: 1rem 2rem;
+        padding: 0.5rem 0.5rem;
+        background: rgb(70,142,180);
+        background: linear-gradient(129deg, #D62AD0 0%, #FB7AFC 46%, #FBC7F7 100%);
+        border-radius: 50%;
+        img {
+            width: 20rem;
+            height: 20rem;
+            border-radius: 50%;
         }
     }
 }
 
-.container-2 {   
-    margin: 1rem 2rem;
-    overflow: hidden;
-    padding: 0.5rem 0.5rem;
-    background: rgb(70,142,180);
-    background: linear-gradient(129deg, rgba(70,142,180,1) 0%, rgba(105,181,210,1) 46%, rgba(0,154,190,1) 100%);
-    border-radius: 50%;
-    img {
-        width: 15rem;
-        height: 15rem;
-        border-radius: 50%;
-        z-index: 5;
+@media screen and (max-width:812px) {
+    .container {
+      flex-direction: column;
+
+      .flip-box {
+          max-width: 80vw;
+      }
+
+      .container-2 {
+          img {
+              max-width: 60vw;
+              max-height: 60vw;
+          }
+      }
     }
-}
+  }
