@@ -9,11 +9,31 @@ footer {
     color: #FF449F;
 
     .credit {
+        padding: 0.75rem 0;
         height: auto;
         background-color: rgba(255, 68, 159, 0.8);
 
-        p {
+        span {
             color: wheat;
+            &::before {
+                content: "\00a9 2021 by jova andreas";
+                animation: change infinite 5s;
+            }
         }
+
+        @keyframes change {
+            0% {
+                content: "\00a9 2021 by jova andreas";
+            }
+            75% {
+                content: "made with \2764";
+            }       
+        }
+    }
+}
+
+.social {
+    &:hover {
+        transform: scale(1.2);
     }
 }
