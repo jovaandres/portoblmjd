@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme) => ({
         backdropFilter: 'blur(12px)',
     },
     menuButton: {
-        alignSelf: 'center'
+        alignSelf: 'center',
+        toolbar: theme.mixins.toolbar,
     },
     title: {
         flexGrow: 1,
@@ -40,7 +41,7 @@ export const Navbar = () => {
     }
 
     return (
-        <AppBar color="transparent" className={classes.root}>
+        <AppBar position="static" color="transparent" className={classes.root}>
             <Toolbar className={classes.menuButton}>
                 <Hidden xsDown>
                     <Grid container justify="center" spacing={5}>

@@ -32,6 +32,9 @@
             .container-1, .container-1-back {
                 grid-area: inner-div;
                 backface-visibility: hidden;
+                -webkit-user-select: none; /* Safari */
+                    -ms-user-select: none; /* Internet Explorer/Edge */
+                        user-select: none; 
               }
               
             .container-1-back {
@@ -94,8 +97,11 @@
         animation: animate-2 1.5s ease;
 
         img {
+            position: inherit;
             width: 20rem;
             height: 20rem;
+            max-width: 24vw;
+            max-height: 24vw;
             border-radius: 50%;
         }
 
@@ -117,6 +123,7 @@
 @media screen and (max-width:768px) {
     .container {
       flex-direction: column;
+      height: auto;
 
       .flip-box {
           max-width: 80vw;

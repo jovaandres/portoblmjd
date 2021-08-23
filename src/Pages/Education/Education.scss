@@ -1,0 +1,117 @@
+.edu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90vh;
+
+    .line-track {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .underline {
+            margin: auto 0;
+            position: absolute;
+            width: 36vw;
+            z-index: 1;
+        }
+    
+        .year-button {
+            position: absolute;
+            min-width: 40vw;
+            display: flex;
+            justify-content: space-around;
+            z-index: 2;
+            button {
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50%;
+                background-color: violet;
+                border-color: transparent;
+                box-shadow: 2px 2px 3px 2px palevioletred;
+
+                &:hover {
+                    background-color: rgb(245, 96, 245);
+                }
+            }
+        }
+    }
+
+    .edu-card-list {
+        display: flex;
+        flex-direction: row;
+
+        .edu-card {
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            width: 30vw;
+            transition: transform .8s;
+            background-color: rgba($color: rgb(250, 157, 188), $alpha: 0.4);
+            backdrop-filter: blur(16px);
+            margin: 1rem 1rem;
+            animation: animate-card 2s ease;
+    
+            .card-header {
+                border-radius: 16px;
+                padding: 1rem 1rem;
+                background-color: rgba($color: violet, $alpha: 0.8);
+                text-align: center;
+    
+                b {
+                    font-size: x-large;
+                    font-weight: normal;
+                }
+            }
+    
+            .card-detail {
+                text-align: center;
+                padding: 1rem 1rem;
+                height: 100%;
+            }
+
+            @keyframes animate-card {
+                0% {
+                    width: 10vw;
+                }              
+                100% {
+                    width: 30vw;
+                }  
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            .edu-card {
+                width: 50vw;
+            }       
+            @keyframes animate-card {
+                0% {
+                    width: 10vw;
+                }              
+                100% {
+                    width: 50vw;
+                }  
+            }     
+        }
+    }
+    @media screen and (max-width: 768px) {
+        flex-direction: row; 
+        height: auto;         
+        
+        .line-track {
+            height: 100%;
+            .underline {
+                width: 0.3rem;
+                height: 34vw;
+            }
+            .year-button {
+                height: 34vw;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+
+}
