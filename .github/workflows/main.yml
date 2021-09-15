@@ -43,7 +43,7 @@ jobs:
           push: true
           tags: ${{ env.REGISTRY_URL }}/${{ env.IMAGE_NAME }}:latest
           context: .
-          file: ./Dockerfile.production
+          file: ./Dockerfile
           builder: ${{ steps.builder2.outputs.name }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
