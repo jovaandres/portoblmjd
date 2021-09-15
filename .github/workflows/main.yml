@@ -1,8 +1,8 @@
 name: CI Production Environtment
 on:
   push:
-    tags:
-      - '*.*.*'
+    branches:
+      - master
 env:
   REGISTRY_URL: jovaandreas.azurecr.io
   IMAGE_NAME: portofolio
