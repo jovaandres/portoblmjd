@@ -33,6 +33,9 @@ jobs:
           fingerprints:
             - $GITHUB_FINGERPRINT
       - run:
+          name: test gh
+          command: npm install -g gh-pages --save-dev
+      - run:
           name: Build Image on Azure Container Registry Task
           command: npm run pushtobuild
 workflows:
