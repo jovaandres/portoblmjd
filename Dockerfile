@@ -2,9 +2,9 @@ FROM node:15.4 as build
 
 WORKDIR /portofolio
 
-COPY package*.json .
+COPY package*.json ./
 RUN npm install
-COPY . .
+COPY . ./
 RUN npm run build
 
 FROM nginx:1.19
