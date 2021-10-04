@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "pushtobuild": "npx gh-pages -b buildimage --message '[skip ci] Updates' -d ./"
+    "pushtobuild": "npx gh-pages -b master --message '[skip ci] Updates' -d ./"
   },
   "eslintConfig": {
     "extends": [
