@@ -21,7 +21,7 @@ jobs:
   deploy:
     working_directory: ~/repo
     docker:
-      - image: circleci/node:10.16.3
+      - image: circleci/node:16.10.0
     steps:
       - checkout
       - run:
@@ -45,4 +45,4 @@ workflows:
             - build # only deploy once build job has completed
           filters:
             branches:
-              only: main # only deploy on the main branch
+              only: master # only deploy on the main branch
