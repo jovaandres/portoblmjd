@@ -20,7 +20,7 @@ jobs:
             - ./node_modules
       - run:
           name: Run tests
-          command: npm run test
+          command: npm run start
   deploy:
     working_directory: ~/repo
     docker:
