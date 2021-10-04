@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Log into Azure
+az login --username $AZURE_SP_USERNAME --password $AZURE_SP_PASSWORD
+
+# Docker log into Azure Container Registry
+az acr login --name $ACR_NAME
+
+# Push container Azure Container Registry
+docker push $ACR_NAME.azurecr.io/$DOCKER_IMAGE_NAME:latest
+
+# Obtain Docker credentials from Azure Container Registry
+ACR_PASSWORD=`az acr credential show --name $ACR_NAME | jq -r '.passwords[0].value'`
+ACR_USERNAME=`az acr credential show --name $ACR_NAME | jq -r '.username'`
