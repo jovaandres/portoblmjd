@@ -19,7 +19,7 @@ install:
 script:
 - docker run -d --env PORT=80 --name test-image -p 80:80 --rm $DOCKER_FULL_IMAGE_NAME
 - sleep 2 # We need to sleep 2 seconds because the web server did not listen yet
-- curl -f --retry 10 --retry-max-time 30 -vv http://localhost:3000
+- curl -f --retry 10 --retry-max-time 30 -vv http://localhost:80
 - docker stop test-image
 
 deploy:
