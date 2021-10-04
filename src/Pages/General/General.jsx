@@ -12,7 +12,7 @@ export const General = () => {
                         <div className="container-1">
                             <h1>Hello, there!</h1>
                             <div className="underline"></div>
-                            <p><b>I'm jova,</b> an undergraduate informatics student at Institut Teknologi Bandung.</p>
+                            <p><b>I'm Jovaaaa,</b> an undergraduate informatics student at Institut Teknologi Bandung.</p>
                             <p>I am an experienced developer skilled in <strong>Mobile Development (Android, Flutter), Backend Development,</strong> and still love to explore a lot of tech related stuff.</p>
                         </div>
                         <div className="container-1-back">
